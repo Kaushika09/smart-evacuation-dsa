@@ -22,30 +22,12 @@ As Member 1 and team lead, my focus is on preparing to explain the Quad Tree com
 maintaining the shared GitHub repository, understanding the overall
 workflow.
 
-## 2. My Responsibilities as Team Lead
 
-My responsibilities include coordinating the project work and making the
-implementation accessible to the team and evaluators. The tasks
-associated with this role are:
-
--   Creating and maintaining the project's GitHub repository.
--   Uploading the Python implementation and README to the repository.
--   Keeping the project files organized so team members can access them.
--   Making the repository public for review.
--   Inviting team members as repository collaborators.
--   Reviewing the project structure and preparing to explain how the
-    main components work together.
--   Helping the team prepare evidence of work and documentation for the
-    evaluation.
-
-These responsibilities support collaboration and make it easier for the
-evaluator to inspect the project files and history.
-
-## 3. Project Overview
+## 2. Project Overview
 
 The system combines spatial hazard searching with risk-range analysis.
 
-### 3.1 Quad Tree
+### 2.1 Quad Tree
 
 A Quad Tree is used to organize two-dimensional spatial information.
 Each hazard has coordinates, such as an x-coordinate and a y-coordinate.
@@ -58,33 +40,33 @@ y-coordinates. The system searches for hazard records that lie within
 those bounds. This is useful when the user wants to inspect hazards in a
 particular geographic area rather than examining every record manually.
 
-### 3.2 Sparse Table
+### 2.2 Sparse Table
 
 A Sparse Table is used for range queries over a sequence of risk values.
 After preprocessing, it can answer range minimum and maximum queries
 efficiently. In the project, this supports examining the risk values
 associated with a selected range of sections.
 
-### 3.3 How the Components Work Together
+### 2.3 How the Components Work Together
 
 The Quad Tree handles location-based hazard queries, while the Sparse
 Table handles range-based risk queries. Together, they demonstrate how
 different data structures can be selected for different query types
 within one application.
 
-## 4. My Focus Area: Quad Tree
+## 3. My Focus Area: Quad Tree
 
 My technical focus for the review is understanding and explaining the
 Quad Tree component.
 
-### 4.1 Purpose
+### 3.1 Purpose
 
 The Quad Tree is suitable for spatial data because it organizes records
 according to their positions in two-dimensional space. It can subdivide
 a region into smaller regions, allowing a search to focus on relevant
 parts of the space.
 
-### 4.2 Insertion
+### 3.2 Insertion
 
 When a hazard is inserted, its coordinates determine where it belongs in
 the tree. If the current node has room, the hazard can be stored there.
@@ -92,14 +74,14 @@ If the node reaches its capacity, the region is subdivided and records
 are placed in the appropriate child regions, according to the
 implementation.
 
-### 4.3 Rectangular Search
+### 3.3 Rectangular Search
 
 A rectangular query specifies a search area using minimum and maximum x-
 and y-coordinates. The query returns the hazards whose coordinates fall
 inside the requested bounds. Regions that cannot contain matching points
 can be skipped, depending on the implementation.
 
-### 4.4 Why Use a Quad Tree?
+### 3.4 Why Use a Quad Tree?
 
 -   It represents two-dimensional spatial data naturally.
 -   It organizes hazard records by location.
@@ -107,7 +89,7 @@ can be skipped, depending on the implementation.
 -   It provides a practical example of a tree-based data structure
     applied to a real-world-style problem.
 
-## 5. Implementation and Demonstration Plan
+## 4. Implementation and Demonstration Plan
 
 For the project review, I can demonstrate the existing program and
 explain its available operations. The demonstration should use the
@@ -125,7 +107,7 @@ This sequence demonstrates the spatial-query component and the
 range-query component without requiring changes to the existing
 implementation.
 
-## 6. Time Complexity: Quad Tree
+## 5. Time Complexity: Quad Tree
 
 The time complexity of a Quad Tree operation depends on the tree's
 shape, the distribution of the points, and how much of the tree a query
@@ -141,7 +123,7 @@ needs to visit.
 These are worst-case explanations. The actual runtime depends on the
 data and the tree structure.
 
-## 7. GitHub and Collaboration Evidence
+## 6. GitHub and Collaboration Evidence
 
 The GitHub repository is used to keep the source code, README, and
 supporting documentation in one place. The repository also provides a
@@ -161,7 +143,7 @@ the invitation alone does not prove that the teammate has completed a
 contribution. Each team member should document and commit work they
 genuinely perform using their own GitHub account.
 
-## 8. Learning and Review Preparation
+## 7. Learning and Review Preparation
 
 To prepare for questions, I will be able to explain:
 
@@ -175,7 +157,7 @@ To prepare for questions, I will be able to explain:
     a Sparse Table.
 -   How the GitHub repository and commit history support project review.
 
-## 9. Conclusion
+## 8. Conclusion
 
 My role as Member 1 focuses on coordinating the project repository,
 organizing the shared implementation and documentation, and preparing to
